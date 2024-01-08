@@ -3,8 +3,9 @@
 ## Demanda prediction model
 
 
-The following is an explanation of the busness case all the code is 
-keeping in mind the main request:
+The following is an explanation of the business case. **Full code explanation on the main.ipynb file.**
+
+Requests:
 
 1. **Pick a model and explain the reason to choose it.**
 2. **Plot a time series for a specific product-customer-agencia.**
@@ -20,6 +21,8 @@ It has 2 pages, being the second page the one where you can find the model predi
 
 ** [Dashboard for Meli 💛](https://app.powerbi.com/view?r=eyJrIjoiYTFjNWY1ZDMtYWNlZi00NmRmLThlYWQtMjQwOTc5MWFjYjcyIiwidCI6ImY5NGJmNGQ5LTgwOTctNDc5NC1hZGY2LWE1NDY2Y2EyODU2MyIsImMiOjR9) **
 
+![Dashboard_overview](https://github.com/The-carlos/meli_assessment/blob/main/Overview_dashboard.PNG)
+![Dashboard_predictions](https://github.com/The-carlos/meli_assessment/blob/main/Predictions_dashboard.PNG)
 
 ### **TASK 1: Pick a model and explain the reason to choose it.**
 
@@ -62,6 +65,10 @@ print(f"Mean Square Error: {mse}")
 The mean square error is **36.87** which is high, but not terrible and to be honest, the best result I could achive after hours of trianing process.
 **There is a key concept here. I used OneHotEncoder as a transformer, this means that my model i completely able to handle unknow features not used during the training process. In other words, if there is a new product or customer, the model is able to make predictions for them.**
 
+When plotting the real values against predicted values it's clear the model is not perfect, but is it pretty accurate:
+
+![Model_performance](https://github.com/The-carlos/meli_assessment/blob/main/predictions_model.PNG)
+
 ### **TASK 2: Plot a time series for a specific product-customer-agencia.**
 
 This one was pretty straight forward. You can find all details in the *main.ipynb* file, but I  it is as follows:
@@ -98,6 +105,9 @@ plt.ylabel('Ventas')
 plt.show()
 ```
 
+![customer_data](https://github.com/The-carlos/meli_assessment/blob/main/specific_customer_plot.PNG)
+
+
 ### **TASK 3: Choose a metric to show the model realyabillity**
 Already explaind in TASK 1.
 
@@ -126,3 +136,6 @@ for dataset in range(len(datasets_list_to_predict)):
 
 ### **TASK 5: Diagram showing all steps followed.**
 Not finished.
+
+
+Thank you so much for your attention. <3
